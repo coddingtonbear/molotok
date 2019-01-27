@@ -1,0 +1,447 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20SU U1
+U 1 1 5C5378A6
+P 4600 3850
+F 0 "U1" H 4070 3896 50  0000 R CNN
+F 1 "ATtiny85-20SU" H 4070 3805 50  0000 R CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 4600 3850 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4600 3850 50  0001 C CNN
+	1    4600 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5C537995
+P 2950 1650
+F 0 "J1" V 2823 1730 50  0000 L CNN
+F 1 "Power" V 2914 1730 50  0000 L CNN
+F 2 "coddingtonbear:JST_XH_B02B-XH-A_02x2.50mm_Straight_LargePads" H 2950 1650 50  0001 C CNN
+F 3 "~" H 2950 1650 50  0001 C CNN
+	1    2950 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5C537A6B
+P 7600 2650
+F 0 "J2" V 7473 2830 50  0000 L CNN
+F 1 "LED" V 7564 2830 50  0000 L CNN
+F 2 "coddingtonbear:JST_XH_B03B-XH-A_03x2.50mm_Straight_LargePads" H 7600 2650 50  0001 C CNN
+F 3 "~" H 7600 2650 50  0001 C CNN
+	1    7600 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5C537BC5
+P 8000 2450
+F 0 "#PWR0101" H 8000 2200 50  0001 C CNN
+F 1 "GND" H 8005 2277 50  0000 C CNN
+F 2 "" H 8000 2450 50  0001 C CNN
+F 3 "" H 8000 2450 50  0001 C CNN
+	1    8000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5C537C85
+P 3350 1550
+F 0 "#PWR0102" H 3350 1400 50  0001 C CNN
+F 1 "VCC" H 3367 1723 50  0000 C CNN
+F 2 "" H 3350 1550 50  0001 C CNN
+F 3 "" H 3350 1550 50  0001 C CNN
+	1    3350 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5C537CED
+P 5750 2300
+F 0 "#PWR0103" H 5750 2050 50  0001 C CNN
+F 1 "GND" H 5755 2127 50  0000 C CNN
+F 2 "" H 5750 2300 50  0001 C CNN
+F 3 "" H 5750 2300 50  0001 C CNN
+	1    5750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5C537CFE
+P 7500 2450
+F 0 "#PWR0104" H 7500 2300 50  0001 C CNN
+F 1 "VCC" H 7517 2623 50  0000 C CNN
+F 2 "" H 7500 2450 50  0001 C CNN
+F 3 "" H 7500 2450 50  0001 C CNN
+	1    7500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C537D37
+P 7600 2050
+F 0 "R3" H 7670 2096 50  0000 L CNN
+F 1 "330" H 7670 2005 50  0000 L CNN
+F 2 "coddingtonbear:0805_Milling" V 7530 2050 50  0001 C CNN
+F 3 "~" H 7600 2050 50  0001 C CNN
+	1    7600 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2450 7600 2200
+Wire Wire Line
+	7700 2450 7700 2300
+Wire Wire Line
+	7700 2300 8000 2300
+Wire Wire Line
+	8000 2300 8000 2450
+Wire Wire Line
+	3150 1650 3200 1650
+Wire Wire Line
+	3200 1650 3200 2200
+$Comp
+L coddingtonbear:AP9101C-SOT-25 U2
+U 1 1 5C538298
+P 5000 1600
+F 0 "U2" H 4975 1937 60  0000 C CNN
+F 1 "AP9101C-SOT-25" H 4975 1831 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 5000 1600 60  0001 C CNN
+F 3 "" H 5000 1600 60  0001 C CNN
+	1    5000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_GSD Q1
+U 1 1 5C5383A1
+P 3750 1650
+F 0 "Q1" V 4093 1650 50  0000 C CNN
+F 1 "Q_PMOS_GSD" V 4002 1650 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SuperSOT-3" H 3950 1750 50  0001 C CNN
+F 3 "~" H 3750 1650 50  0001 C CNN
+	1    3750 1650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3150 1550 3350 1550
+Wire Wire Line
+	3750 1850 3750 2200
+Wire Wire Line
+	3750 2200 3200 2200
+$Comp
+L Device:R R1
+U 1 1 5C53886F
+P 4250 1550
+F 0 "R1" V 4043 1550 50  0000 C CNN
+F 1 "330" V 4134 1550 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" V 4180 1550 50  0001 C CNN
+F 3 "~" H 4250 1550 50  0001 C CNN
+	1    4250 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C53890F
+P 4050 1900
+F 0 "C1" H 4165 1946 50  0000 L CNN
+F 1 "0.1u" H 4165 1855 50  0000 L CNN
+F 2 "coddingtonbear:0805_Milling" H 4088 1750 50  0001 C CNN
+F 3 "~" H 4050 1900 50  0001 C CNN
+	1    4050 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1550 4050 1550
+Wire Wire Line
+	4050 1750 4050 1550
+Connection ~ 4050 1550
+Wire Wire Line
+	4050 1550 3950 1550
+Wire Wire Line
+	4050 2050 4050 2200
+Wire Wire Line
+	4050 2200 3750 2200
+Connection ~ 3750 2200
+Wire Wire Line
+	4400 1550 4500 1550
+Wire Wire Line
+	4050 2200 4500 2200
+Wire Wire Line
+	4500 2200 4500 1650
+Connection ~ 4050 2200
+$Comp
+L coddingtonbear:DMG9926UDM Q2
+U 2 1 5C538EB7
+P 5350 2200
+F 0 "Q2" V 5600 2200 50  0000 C CNN
+F 1 "DMG9926UDM" V 5691 2200 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5550 2125 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/FD/FDG1024NZ.pdf" H 5350 2200 50  0001 L CNN
+	2    5350 2200
+	0    -1   1    0   
+$EndComp
+$Comp
+L coddingtonbear:DMG9926UDM Q2
+U 1 1 5C538F72
+P 4800 2200
+F 0 "Q2" V 5050 2200 50  0000 C CNN
+F 1 "DMG9926UDM" V 5141 2200 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5000 2125 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/FD/FDG1024NZ.pdf" H 4800 2200 50  0001 L CNN
+	1    4800 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 1850 5350 1850
+Wire Wire Line
+	5350 1850 5350 2000
+Wire Wire Line
+	4900 1850 4800 1850
+Wire Wire Line
+	4800 1850 4800 2000
+Wire Wire Line
+	4600 2300 4500 2300
+Wire Wire Line
+	4500 2300 4500 2200
+Connection ~ 4500 2200
+Text Notes 4950 2250 0    30   ~ 0
+Connected\nInternally
+Connection ~ 3350 1550
+Wire Wire Line
+	3350 1550 3550 1550
+Wire Wire Line
+	5550 2300 5750 2300
+$Comp
+L Device:R R2
+U 1 1 5C53A014
+P 5750 1900
+F 0 "R2" H 5820 1946 50  0000 L CNN
+F 1 "2.7k" H 5820 1855 50  0000 L CNN
+F 2 "coddingtonbear:0805_Milling" V 5680 1900 50  0001 C CNN
+F 3 "~" H 5750 1900 50  0001 C CNN
+	1    5750 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1550 5750 1550
+Wire Wire Line
+	5750 1550 5750 1750
+Wire Wire Line
+	5750 2050 5750 2300
+Connection ~ 5750 2300
+Text GLabel 7400 1800 0    50   Input ~ 0
+NEOPIXEL
+Wire Wire Line
+	7400 1800 7600 1800
+Wire Wire Line
+	7600 1800 7600 1900
+$Comp
+L power:VCC #PWR0105
+U 1 1 5C53AB86
+P 4600 3050
+F 0 "#PWR0105" H 4600 2900 50  0001 C CNN
+F 1 "VCC" H 4617 3223 50  0000 C CNN
+F 2 "" H 4600 3050 50  0001 C CNN
+F 3 "" H 4600 3050 50  0001 C CNN
+	1    4600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5C53ABA7
+P 4450 3150
+F 0 "C2" V 4702 3150 50  0000 C CNN
+F 1 "0.1u" V 4611 3150 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" H 4488 3000 50  0001 C CNN
+F 3 "~" H 4450 3150 50  0001 C CNN
+	1    4450 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5C53AC38
+P 4200 3200
+F 0 "#PWR0106" H 4200 2950 50  0001 C CNN
+F 1 "GND" H 4205 3027 50  0000 C CNN
+F 2 "" H 4200 3200 50  0001 C CNN
+F 3 "" H 4200 3200 50  0001 C CNN
+	1    4200 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3150 4200 3150
+Wire Wire Line
+	4200 3150 4200 3200
+Wire Wire Line
+	4600 3050 4600 3150
+Wire Wire Line
+	4600 3150 4600 3250
+Connection ~ 4600 3150
+$Comp
+L power:GND #PWR0107
+U 1 1 5C53B8D0
+P 4600 4550
+F 0 "#PWR0107" H 4600 4300 50  0001 C CNN
+F 1 "GND" H 4605 4377 50  0000 C CNN
+F 2 "" H 4600 4550 50  0001 C CNN
+F 3 "" H 4600 4550 50  0001 C CNN
+	1    4600 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4550 4600 4450
+Text GLabel 5200 3550 2    50   Output ~ 0
+NEOPIXEL
+$Comp
+L Device:R_POT RV1
+U 1 1 5C53C20C
+P 5850 3850
+F 0 "RV1" H 5780 3804 50  0000 R CNN
+F 1 "R_POT" H 5780 3895 50  0000 R CNN
+F 2 "coddingtonbear:SV01_Murata_Pot" H 5850 3850 50  0001 C CNN
+F 3 "~" H 5850 3850 50  0001 C CNN
+	1    5850 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR0108
+U 1 1 5C53C2FD
+P 5650 4100
+F 0 "#PWR0108" H 5650 3950 50  0001 C CNN
+F 1 "VCC" H 5667 4273 50  0000 C CNN
+F 2 "" H 5650 4100 50  0001 C CNN
+F 3 "" H 5650 4100 50  0001 C CNN
+	1    5650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5C53C322
+P 6250 3700
+F 0 "#PWR0109" H 6250 3450 50  0001 C CNN
+F 1 "GND" H 6255 3527 50  0000 C CNN
+F 2 "" H 6250 3700 50  0001 C CNN
+F 3 "" H 6250 3700 50  0001 C CNN
+	1    6250 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5C53EEF8
+P 7500 3900
+F 0 "SW1" H 7500 4185 50  0000 C CNN
+F 1 "Control" H 7500 4094 50  0000 C CNN
+F 2 "coddingtonbear:SMD_RED_TACTILE_SWITCH" H 7500 4100 50  0001 C CNN
+F 3 "" H 7500 4100 50  0001 C CNN
+	1    7500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5C53EFE8
+P 7750 4250
+F 0 "#PWR0110" H 7750 4000 50  0001 C CNN
+F 1 "GND" H 7755 4077 50  0000 C CNN
+F 2 "" H 7750 4250 50  0001 C CNN
+F 3 "" H 7750 4250 50  0001 C CNN
+	1    7750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5C53F00F
+P 7100 3900
+F 0 "R4" V 6893 3900 50  0000 C CNN
+F 1 "1k" V 6984 3900 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" V 7030 3900 50  0001 C CNN
+F 3 "~" H 7100 3900 50  0001 C CNN
+	1    7100 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5C53F0C9
+P 7100 4250
+F 0 "C3" V 7352 4250 50  0000 C CNN
+F 1 "0.1u" V 7261 4250 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" H 7138 4100 50  0001 C CNN
+F 3 "~" H 7100 4250 50  0001 C CNN
+	1    7100 4250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7700 3900 7750 3900
+Wire Wire Line
+	7250 4250 7750 4250
+Connection ~ 7750 4250
+Wire Wire Line
+	7300 3900 7250 3900
+Wire Wire Line
+	6950 3900 6900 3900
+Wire Wire Line
+	6900 3900 6900 4250
+Wire Wire Line
+	6900 4250 6950 4250
+Text GLabel 6900 4250 0    50   Input ~ 0
+BTN
+Text GLabel 5200 3850 2    50   Output ~ 0
+BTN
+Wire Wire Line
+	5700 3850 5450 3850
+Wire Wire Line
+	5450 3850 5450 3950
+Wire Wire Line
+	5450 3950 5200 3950
+Wire Wire Line
+	5850 3700 5850 3650
+Wire Wire Line
+	5850 3650 6250 3650
+Wire Wire Line
+	6250 3650 6250 3700
+Wire Wire Line
+	5650 4100 5650 4150
+Wire Wire Line
+	5650 4150 5850 4150
+Wire Wire Line
+	5850 4150 5850 4000
+$Comp
+L Device:Jumper_NO_Small JP1
+U 1 1 5C5437A5
+P 6100 1700
+F 0 "JP1" V 6054 1748 50  0000 L CNN
+F 1 " Dis Curr Limit" V 6145 1748 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6100 1700 50  0001 C CNN
+F 3 "~" H 6100 1700 50  0001 C CNN
+	1    6100 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 1550 6100 1550
+Wire Wire Line
+	6100 1550 6100 1600
+Connection ~ 5750 1550
+Wire Wire Line
+	6100 1800 6100 2650
+Wire Wire Line
+	6100 2650 4050 2650
+Wire Wire Line
+	4050 2650 4050 2200
+Connection ~ 7750 4200
+Wire Wire Line
+	7750 4200 7750 4250
+Wire Wire Line
+	7750 3900 7750 4250
+$EndSCHEMATC
