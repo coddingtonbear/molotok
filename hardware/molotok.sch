@@ -178,31 +178,29 @@ Connection ~ 3750 2200
 Wire Wire Line
 	4400 1550 4500 1550
 Wire Wire Line
-	4050 2200 4500 2200
-Wire Wire Line
 	4500 2200 4500 1650
 Connection ~ 4050 2200
 $Comp
 L coddingtonbear:DMG9926UDM Q2
 U 2 1 5C538EB7
-P 5350 2200
-F 0 "Q2" V 5600 2200 50  0000 C CNN
-F 1 "DMG9926UDM" V 5691 2200 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5550 2125 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/FD/FDG1024NZ.pdf" H 5350 2200 50  0001 L CNN
-	2    5350 2200
-	0    -1   1    0   
-$EndComp
-$Comp
-L coddingtonbear:DMG9926UDM Q2
-U 1 1 5C538F72
 P 4800 2200
 F 0 "Q2" V 5050 2200 50  0000 C CNN
 F 1 "DMG9926UDM" V 5141 2200 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5000 2125 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/FD/FDG1024NZ.pdf" H 4800 2200 50  0001 L CNN
-	1    4800 2200
+	2    4800 2200
 	0    1    1    0   
+$EndComp
+$Comp
+L coddingtonbear:DMG9926UDM Q2
+U 1 1 5C538F72
+P 5350 2200
+F 0 "Q2" V 5600 2200 50  0000 C CNN
+F 1 "DMG9926UDM" V 5691 2200 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5550 2125 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/FD/FDG1024NZ.pdf" H 5350 2200 50  0001 L CNN
+	1    5350 2200
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	5100 1850 5350 1850
@@ -439,9 +437,10 @@ Wire Wire Line
 	6100 2650 4050 2650
 Wire Wire Line
 	4050 2650 4050 2200
-Connection ~ 7750 4200
 Wire Wire Line
 	7750 4200 7750 4250
+Wire Wire Line
+	4050 2200 4500 2200
 Wire Wire Line
 	7750 3900 7750 4250
 $EndSCHEMATC
