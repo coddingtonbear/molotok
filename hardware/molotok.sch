@@ -304,39 +304,6 @@ Wire Wire Line
 Text GLabel 5200 3550 2    50   Output ~ 0
 NEOPIXEL
 $Comp
-L Device:R_POT RV1
-U 1 1 5C53C20C
-P 5850 3850
-F 0 "RV1" H 5780 3804 50  0000 R CNN
-F 1 "R_POT" H 5780 3895 50  0000 R CNN
-F 2 "coddingtonbear:SV01_Murata_Pot" H 5850 3850 50  0001 C CNN
-F 3 "~" H 5850 3850 50  0001 C CNN
-	1    5850 3850
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:VCC #PWR0108
-U 1 1 5C53C2FD
-P 5650 4100
-F 0 "#PWR0108" H 5650 3950 50  0001 C CNN
-F 1 "VCC" H 5667 4273 50  0000 C CNN
-F 2 "" H 5650 4100 50  0001 C CNN
-F 3 "" H 5650 4100 50  0001 C CNN
-	1    5650 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0109
-U 1 1 5C53C322
-P 6250 3700
-F 0 "#PWR0109" H 6250 3450 50  0001 C CNN
-F 1 "GND" H 6255 3527 50  0000 C CNN
-F 2 "" H 6250 3700 50  0001 C CNN
-F 3 "" H 6250 3700 50  0001 C CNN
-	1    6250 3700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Switch:SW_Push SW1
 U 1 1 5C53EEF8
 P 7500 3900
@@ -393,28 +360,10 @@ Wire Wire Line
 	6900 3900 6900 4250
 Wire Wire Line
 	6900 4250 6950 4250
-Text GLabel 6900 4250 0    50   Input ~ 0
+Text GLabel 6900 4250 0    50   Output ~ 0
 BTN
-Text GLabel 5200 3850 2    50   Output ~ 0
+Text GLabel 5200 3750 2    50   Input ~ 0
 BTN
-Wire Wire Line
-	5700 3850 5450 3850
-Wire Wire Line
-	5450 3850 5450 3950
-Wire Wire Line
-	5450 3950 5200 3950
-Wire Wire Line
-	5850 3700 5850 3650
-Wire Wire Line
-	5850 3650 6250 3650
-Wire Wire Line
-	6250 3650 6250 3700
-Wire Wire Line
-	5650 4100 5650 4150
-Wire Wire Line
-	5650 4150 5850 4150
-Wire Wire Line
-	5850 4150 5850 4000
 $Comp
 L Device:Jumper_NO_Small JP1
 U 1 1 5C5437A5
@@ -443,4 +392,99 @@ Wire Wire Line
 	4050 2200 4500 2200
 Wire Wire Line
 	7750 3900 7750 4250
+$Comp
+L Device:Rotary_Encoder SW2
+U 1 1 5C5494FD
+P 7300 5000
+F 0 "SW2" H 7529 5046 50  0000 L CNN
+F 1 "Rotary_Encoder" H 7529 4955 50  0000 L CNN
+F 2 "coddingtonbear:PES12" H 7150 5160 50  0001 C CNN
+F 3 "~" H 7300 5260 50  0001 C CNN
+	1    7300 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5C549FE7
+P 6400 5000
+F 0 "#PWR0108" H 6400 4750 50  0001 C CNN
+F 1 "GND" H 6405 4827 50  0000 C CNN
+F 2 "" H 6400 5000 50  0001 C CNN
+F 3 "" H 6400 5000 50  0001 C CNN
+	1    6400 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5000 6600 5000
+Text GLabel 6450 4700 0    50   Output ~ 0
+ROT_A
+Text GLabel 6450 5350 0    50   Output ~ 0
+ROT_B
+Text GLabel 5200 3950 2    50   Input ~ 0
+ROT_B
+Text GLabel 5200 3850 2    50   Input ~ 0
+ROT_A
+$Comp
+L Device:C C?
+U 1 1 5C54B2D4
+P 6600 4850
+F 0 "C?" H 6715 4896 50  0000 L CNN
+F 1 "0.1u" H 6715 4805 50  0000 L CNN
+F 2 "coddingtonbear:0805_Milling" H 6638 4700 50  0001 C CNN
+F 3 "~" H 6600 4850 50  0001 C CNN
+	1    6600 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C54B347
+P 6600 5150
+F 0 "C?" H 6700 5250 50  0000 L CNN
+F 1 "0.1u" H 6700 5150 50  0000 L CNN
+F 2 "coddingtonbear:0805_Milling" H 6638 5000 50  0001 C CNN
+F 3 "~" H 6600 5150 50  0001 C CNN
+	1    6600 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6600 5000
+Wire Wire Line
+	6400 5000 6600 5000
+$Comp
+L Device:R R?
+U 1 1 5C54B480
+P 6750 4700
+F 0 "R?" V 6543 4700 50  0000 C CNN
+F 1 "1k" V 6634 4700 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" V 6680 4700 50  0001 C CNN
+F 3 "~" H 6750 4700 50  0001 C CNN
+	1    6750 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C54B4DC
+P 6750 5300
+F 0 "R?" V 6850 5300 50  0000 C CNN
+F 1 "1k" V 6900 5300 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" V 6680 5300 50  0001 C CNN
+F 3 "~" H 6750 5300 50  0001 C CNN
+	1    6750 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6600 4700 6450 4700
+Connection ~ 6600 4700
+Wire Wire Line
+	6450 5350 6600 5350
+Wire Wire Line
+	6600 5350 6600 5300
+Connection ~ 6600 5300
+Wire Wire Line
+	7000 5100 7000 5300
+Wire Wire Line
+	7000 5300 6900 5300
+Wire Wire Line
+	7000 4900 7000 4700
+Wire Wire Line
+	7000 4700 6900 4700
 $EndSCHEMATC
