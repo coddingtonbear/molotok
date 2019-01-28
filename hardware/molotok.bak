@@ -415,13 +415,76 @@ F 3 "" H 6400 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7000 5000 6400 5000
-Text GLabel 7000 4900 0    50   Output ~ 0
+	7000 5000 6600 5000
+Text GLabel 6450 4700 0    50   Output ~ 0
 ROT_A
-Text GLabel 7000 5100 0    50   Output ~ 0
+Text GLabel 6450 5350 0    50   Output ~ 0
 ROT_B
 Text GLabel 5200 3950 2    50   Input ~ 0
 ROT_B
 Text GLabel 5200 3850 2    50   Input ~ 0
 ROT_A
+$Comp
+L Device:C C?
+U 1 1 5C54B2D4
+P 6600 4850
+F 0 "C?" H 6715 4896 50  0000 L CNN
+F 1 "0.1u" H 6715 4805 50  0000 L CNN
+F 2 "coddingtonbear:0805_Milling" H 6638 4700 50  0001 C CNN
+F 3 "~" H 6600 4850 50  0001 C CNN
+	1    6600 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C54B347
+P 6600 5150
+F 0 "C?" H 6700 5250 50  0000 L CNN
+F 1 "0.1u" H 6700 5150 50  0000 L CNN
+F 2 "coddingtonbear:0805_Milling" H 6638 5000 50  0001 C CNN
+F 3 "~" H 6600 5150 50  0001 C CNN
+	1    6600 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6600 5000
+Wire Wire Line
+	6400 5000 6600 5000
+$Comp
+L Device:R R?
+U 1 1 5C54B480
+P 6750 4700
+F 0 "R?" V 6543 4700 50  0000 C CNN
+F 1 "1k" V 6634 4700 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" V 6680 4700 50  0001 C CNN
+F 3 "~" H 6750 4700 50  0001 C CNN
+	1    6750 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C54B4DC
+P 6750 5300
+F 0 "R?" V 6850 5300 50  0000 C CNN
+F 1 "1k" V 6900 5300 50  0000 C CNN
+F 2 "coddingtonbear:0805_Milling" V 6680 5300 50  0001 C CNN
+F 3 "~" H 6750 5300 50  0001 C CNN
+	1    6750 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6600 4700 6450 4700
+Connection ~ 6600 4700
+Wire Wire Line
+	6450 5350 6600 5350
+Wire Wire Line
+	6600 5350 6600 5300
+Connection ~ 6600 5300
+Wire Wire Line
+	7000 5100 7000 5300
+Wire Wire Line
+	7000 5300 6900 5300
+Wire Wire Line
+	7000 4900 7000 4700
+Wire Wire Line
+	7000 4700 6900 4700
 $EndSCHEMATC
