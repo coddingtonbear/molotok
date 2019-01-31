@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:molotok-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -27,12 +28,12 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 5C537995
-P 2950 1650
-F 0 "J1" V 2823 1730 50  0000 L CNN
-F 1 "Power" V 2914 1730 50  0000 L CNN
-F 2 "coddingtonbear:JST_XH_B02B-XH-A_02x2.50mm_Straight_LargePads" H 2950 1650 50  0001 C CNN
-F 3 "~" H 2950 1650 50  0001 C CNN
-	1    2950 1650
+P 2350 1650
+F 0 "J1" V 2223 1730 50  0000 L CNN
+F 1 "Power" V 2314 1730 50  0000 L CNN
+F 2 "coddingtonbear:JST_XH_B02B-XH-A_02x2.50mm_Straight_LargePads" H 2350 1650 50  0001 C CNN
+F 3 "~" H 2350 1650 50  0001 C CNN
+	1    2350 1650
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -49,12 +50,12 @@ $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5C537BC5
-P 8000 2450
-F 0 "#PWR0101" H 8000 2200 50  0001 C CNN
-F 1 "GND" H 8005 2277 50  0000 C CNN
-F 2 "" H 8000 2450 50  0001 C CNN
-F 3 "" H 8000 2450 50  0001 C CNN
-	1    8000 2450
+P 9300 2750
+F 0 "#PWR0101" H 9300 2500 50  0001 C CNN
+F 1 "GND" H 9305 2577 50  0000 C CNN
+F 2 "" H 9300 2750 50  0001 C CNN
+F 3 "" H 9300 2750 50  0001 C CNN
+	1    9300 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -106,12 +107,6 @@ Wire Wire Line
 Wire Wire Line
 	7700 2450 7700 2300
 Wire Wire Line
-	7700 2300 8000 2300
-Wire Wire Line
-	8000 2300 8000 2450
-Wire Wire Line
-	3150 1650 3200 1650
-Wire Wire Line
 	3200 1650 3200 2200
 $Comp
 L coddingtonbear:AP9101C-SOT-25 U2
@@ -135,8 +130,6 @@ F 3 "~" H 3750 1650 50  0001 C CNN
 	1    3750 1650
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	3150 1550 3350 1550
 Wire Wire Line
 	3750 1850 3750 2200
 Wire Wire Line
@@ -487,4 +480,40 @@ Wire Wire Line
 	7000 4900 7000 4700
 Wire Wire Line
 	7000 4700 6900 4700
+$Comp
+L Device:Q_NMOS_SGD Q3
+U 1 1 5C55C590
+P 9200 2550
+F 0 "Q3" H 9405 2596 50  0000 L CNN
+F 1 "Q_NMOS_SGD" H 9405 2505 50  0000 L CNN
+F 2 "coddingtonbear:PSMN5R4-25YLD" H 9400 2650 50  0001 C CNN
+F 3 "~" H 9200 2550 50  0001 C CNN
+	1    9200 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 5200 3650 2    50   Output ~ 0
+ENABLE_NEOPIXEL
+Wire Wire Line
+	9300 2300 9300 2350
+Wire Wire Line
+	7700 2300 9300 2300
+Text GLabel 9000 2550 0    50   Input ~ 0
+ENABLE_NEOPIXEL
+$Comp
+L Device:Fuse F1
+U 1 1 5C55F5C3
+P 2850 1550
+F 0 "F1" V 2653 1550 50  0000 C CNN
+F 1 "Fuse" V 2744 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2780 1550 50  0001 C CNN
+F 3 "~" H 2850 1550 50  0001 C CNN
+	1    2850 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2700 1550 2550 1550
+Wire Wire Line
+	3000 1550 3350 1550
+Wire Wire Line
+	2550 1650 3200 1650
 $EndSCHEMATC
